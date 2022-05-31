@@ -10,7 +10,7 @@
       
      
         <header> 
-        <?php include("/Applications/MAMP/htdocs/Niveau1/Niveau1/header.php"); ?>
+        <?php include("header.php"); ?>
 </header>
 
            <?php
@@ -18,7 +18,7 @@
          * Etape 1: Ouvrir une connexion avec la base de donnée.
          */
         // on va en avoir besoin pour la suite
-        include ("/Applications/MAMP/htdocs/Niveau1/Niveau1/db_connection.php");
+        include ("db_connection.php");
         //verification
         if ($mysqli->connect_errno)
         {

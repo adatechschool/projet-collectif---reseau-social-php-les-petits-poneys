@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-        <?php include("/Applications/MAMP/htdocs/Niveau1/Niveau1/header.php"); ?>
+        <?php include("header.php"); ?>
         </header>
         <div id="wrapper">
             <aside>
@@ -28,7 +28,7 @@
                 // Etape 1: récupérer l'id de l'utilisateur
                 $userId = intval($_GET['user_id']);
                 // Etape 2: se connecter à la base de donnée
-                $mysqli = new mysqli("localhost", "root", "root", "socialnetwork");
+                include ("db_connection.php");
                 // Etape 3: récupérer le nom de l'utilisateur
                 $laQuestionEnSql = "
                     SELECT users.* 

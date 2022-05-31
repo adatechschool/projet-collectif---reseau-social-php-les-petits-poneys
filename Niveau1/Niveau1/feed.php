@@ -9,7 +9,7 @@
     <body>
         <header>
         
-        <?php include("/Applications/MAMP/htdocs/Niveau1/Niveau1/header.php"); ?>
+        <?php include("header.php"); ?>
 
         </header>
         <div id="wrapper">
@@ -28,7 +28,7 @@
             /**
              * Etape 2: se connecter à la base de donnée
              */
-            include ("/Applications/MAMP/htdocs/Niveau1/Niveau1/db_connection.php");
+            include ("db_connection.php");
             ?>
 
             <aside>
