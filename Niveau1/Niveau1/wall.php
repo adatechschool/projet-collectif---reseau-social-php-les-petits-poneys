@@ -20,8 +20,7 @@
              * ... mais en résumé c'est une manière de passer des informations à la page en ajoutant des choses dans l'url
              */
             $userId =intval($_GET['user_id']);
-            ?>
-            <?php
+           
             /**
              * Etape 2: se connecter à la base de donnée
              */
