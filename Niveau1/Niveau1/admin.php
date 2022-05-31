@@ -52,8 +52,8 @@
                     echo "<pre>" . print_r($tag, 1) . "</pre>";
                     ?>
                     <article>
-                        <h3>#chaussette</h3>
-                        <p>id:321</p>
+                        <h3>#<?php echo $tag['label'] ?></h3>
+                        <p><?php echo $tag['id'] ?></p>
                         <nav>
                             <a href="tags.php?tag_id=321">Messages</a>
                         </nav>
@@ -85,8 +85,8 @@
                     echo "<pre>" . print_r($tag, 1) . "</pre>";
                     ?>
                     <article>
-                        <h3><?php echo $alias['alias'] ?></h3>
-                        <p><?php echo $id['id'] ?></p>
+                        <h3><?php echo $tag['alias'] ?></h3>
+                        <p><?php echo $tag['id'] ?></p>
                         <nav>
                             <a href="wall.php?user_id=123">Mur</a>
                             | <a href="feed.php?user_id=123">Flux</a>
