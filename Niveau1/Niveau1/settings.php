@@ -64,21 +64,21 @@
                  * Etape 4: à vous de jouer
                  */
                 //@todo: afficher le résultat de la ligne ci dessous, remplacer les valeurs ci-après puis effacer la ligne ci-dessous
-                // echo "<pre>" . print_r($user, 1) . "</pre>";
+                //echo "<pre>" . print_r($user, 1) . "</pre>";
                 ?>                
                 <article class='parameters'>
                     <h3>Mes paramètres</h3>
                     <dl>
                         <dt>Pseudo</dt>
-                            <dd><?php echo $user['alias'] ?></dd>
+                        <dd><?php echo $user['alias'] ?></dd>
                         <dt>Email</dt>
-                            <dd><?php echo $user['email'] ?></dd>
+                        <dd><?php echo $user['email'] ?></dd>
                         <dt>Nombre de message</dt>
-                            <dd><?php echo $user['totalpost'] ?></dd>
+                        <dd><?php echo $user['totalpost'] ?></dd>
                         <dt>Nombre de "J'aime" donnés </dt>
-                            <dd><?php echo $user['totalgiven'] ?></dd>
+                        <dd><?php echo $user['totalgiven'] ?></dd>
                         <dt>Nombre de "J'aime" reçus</dt>
-                            <dd><?php echo $user['totalrecieved'] ?></dd>
+                        <dd><?php echo $user['totalrecieved'] ?></dd>
                     </dl>
 
                 </article>

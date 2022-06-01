@@ -55,7 +55,7 @@
                         <h3>#<?php echo $tag['label'] ?></h3>
                         <p><?php echo $tag['id'] ?></p>
                         <nav>
-                            <a href="tags.php?tag_id=<?php echo $tag['id'] ?>">Messages</a>
+                           <a href="tags.php?tag_id=<?php echo $tag['id'] ?>">Messages</a>
                         </nav>
                     </article>
                 <?php } ?>
@@ -78,14 +78,14 @@
 
                 /*
                  * Etape 5 : @todo : Afficher les utilisatrices en s'inspirant de ce qui a été fait dans news.php
-                 * Attention à en pas oublier de modifier dans le lien les "user_id=123" avec l'id de l'utilisatrice
-                 */
+                 * Attention à en pas oublier de modifier dans le lien les "user id=123" avec l'id de l'utilisatrice
+                 */  
                 while ($tag = $lesInformations->fetch_assoc())
                 {
                     //echo "<pre>" . print_r($tag, 1) . "</pre>";
                     ?>
                     <article>
-                        <h3><?php echo $tag['alias'] ?></h3>
+                    <h3><?php echo $tag['alias'] ?></h3>
                         <p><?php echo $tag['id'] ?></p>
                         <nav>
                             <a href="wall.php?user_id=123">Mur</a>

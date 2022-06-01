@@ -77,32 +77,25 @@
                 {
                     echo("Échec de la requete : " . $mysqli->error);
                 }
-
+                while ($post = $lesInformations->fetch_assoc())
+                {
                 /**
                  * Etape 4: @todo Parcourir les messsages et remplir correctement le HTML avec les bonnes valeurs php
                  * A vous de retrouver comment faire la boucle while de parcours...
                  */
-                
-                while ($post = $lesInformations->fetch_assoc())
-                {
-                
+
                 ?>                
                 <article>
-                    <h3>
-                        <time><?php echo $post['created'] ?></time>
-                    </h3>
-                    <address><?php echo $post['author_name'] ?></address>
-                    <div>
-                        <p><?php echo $post['content'] ?></p>
-                    </div>                                            
-                    <footer>
-                        <small>♥ <?php echo $post['like_numebr'] ?></small>
-                        <a href="">#<?php echo $post['taglist'] ?></a>
+                <?php               
+                      include("post.php")
+                        ?>
                     </footer>
                 </article>
-                <?php
-                }// et de pas oublier de fermer ici vote while
-                ?>
+                // et de pas oublier de fermer ici vote while
+                <?php } ?>
+                 
+                
+               
 
 
             </main>
