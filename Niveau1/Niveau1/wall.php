@@ -29,6 +29,8 @@
 
             <aside>
                 <?php
+              
+            
                 /**
                  * Etape 3: récupérer le nom de l'utilisateur
                  */                
@@ -48,6 +50,8 @@
             </aside>
             <main>
                 <?php
+                    include("input_post2.php");
+                
                 /**
                  * Etape 3: récupérer tous les messages de l'utilisatrice
                  */

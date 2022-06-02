@@ -1,38 +1,5 @@
 <?php
-session_start();
-?>
-<!doctype html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>ReSoC - Post d'usurpateur</title> 
-        <meta name="author" content="Julien Falconnet">
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <header>
-        <?php include("header.php"); ?>
-        </header>
-
-        <div id="wrapper" >
-
-            <aside>
-                <h2>Présentation</h2>
-                <p>Sur cette page on peut poster un message en se faisant 
-                    passer pour quelqu'un d'autre</p>
-            </aside>
-            <main>
-                <article>
-                    <h2>Poster un message</h2>
-                    <?php
-                    /**
-                     * BD
-                     */
-                    include("db_connection.php");
-                    /**
-                     * Récupération de la liste des auteurs
-                     */
-                    $listAuteurs = [];
+$listAuteurs = [];
                     $laQuestionEnSql = "SELECT * FROM users";
                     $lesInformations = $mysqli->query($laQuestionEnSql);
                     while ($user = $lesInformations->fetch_assoc())
@@ -83,23 +50,19 @@ session_start();
                         }
                     }
                     ?>                     
-                    <form action="usurpedpost.php" method="post">
-                        <input type='hidden' name='???' value='achanger'>
+                    <form action="wall.php?user_id=<?php $_SESSION['connected_id']?>" method="post">
+                        <input type='hidden' name='auteur' value='<?php $_SESSION['connected_id']?>'>
                         <dl>
                             <dt><label for='auteur'>Auteur</label></dt>
-                            <dd><select name='auteur'>
-                                    <?php
-                                    foreach ($listAuteurs as $id => $alias)
-                                        echo "<option value='$id'>$alias</option>";
-                                    ?>
-                                </select></dd>
+                            <!--<dd><select name='auteur'>
+                                    
+                            <?php  foreach ($listAuteurs as $user_id => $alias) 
+                            echo "<option value='$id'>$alias</option>";?>
+                                        
+                                </select></dd>-->
                             <dt><label for='message'>Message</label></dt>
                             <dd><textarea name='message'></textarea></dd>
                         </dl>
                         <input type='submit'>
-                    </form>               
-                </article>
-            </main>
-        </div>
-    </body>
-</html>
+                    </form> 
+                   

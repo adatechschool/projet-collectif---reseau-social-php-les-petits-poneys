@@ -88,11 +88,11 @@
                     <h3><?php echo $tag['alias'] ?></h3>
                         <p><?php echo $tag['id'] ?></p>
                         <nav>
-                            <a href="wall.php?user_id=123">Mur</a>
-                            | <a href="feed.php?user_id=123">Flux</a>
-                            | <a href="settings.php?user_id=123">Paramètres</a>
-                            | <a href="followers.php?user_id=123">Suiveurs</a>
-                            | <a href="subscriptions.php?user_id=123">Abonnements</a>
+                            <a href="wall.php?user_id=<?php $_SESSION['connected_id']?>">Mur</a>
+                            | <a href="feed.php?user_id=<?php $_SESSION['connected_id']?>">Flux</a>
+                            | <a href="settings.php?user_id=<?php $_SESSION['connected_id']?>">Paramètres</a>
+                            | <a href="followers.php?user_id=<?php $_SESSION['connected_id']?>">Suiveurs</a>
+                            | <a href="subscriptions.php?user_id=<?php $_SESSION['connected_id']?>">Abonnements</a>
                         </nav>
                     </article>
                 <?php } ?>
