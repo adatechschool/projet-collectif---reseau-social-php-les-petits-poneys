@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fr">
     <head>
@@ -53,6 +56,7 @@
                     SELECT posts.content,
                     posts.created,
                     users.alias as author_name,  
+                    users.id as user_id,
                     count(likes.id) as like_number,  
                     GROUP_CONCAT(DISTINCT tags.label) AS taglist 
                     FROM posts
@@ -62,7 +66,7 @@
                     LEFT JOIN likes      ON likes.post_id  = posts.id 
                     GROUP BY posts.id
                     ORDER BY posts.created DESC  
-                    LIMIT 5
+                    LIMIT 20
                     ";
                 $lesInformations = $mysqli->query($laQuestionEnSql);
                 // Vérification
@@ -80,7 +84,7 @@
                 {
                     //la ligne ci-dessous doit etre supprimée mais regardez ce 
                     //qu'elle affiche avant pour comprendre comment sont organisées les information dans votre 
-                    //echo "<pre>" . print_r($post, 1) . "</pre>";
+                    echo "<pre>" . print_r($post, 1) . "</pre>";
 
                     // @todo : Votre mission c'est de remplacer les AREMPLACER par les bonnes valeurs
                     // ci-dessous par les bonnes valeurs cachées dans la variable $post 

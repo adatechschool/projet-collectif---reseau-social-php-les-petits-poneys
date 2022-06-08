@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fr">
     <head>
@@ -93,10 +96,6 @@
                 </article>
                 // et de pas oublier de fermer ici vote while
                 <?php } ?>
-                 
-                
-               
-
 
             </main>
         </div>

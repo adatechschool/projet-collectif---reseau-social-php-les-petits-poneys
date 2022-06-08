@@ -21,8 +21,8 @@ $enCoursDeTraitement = isset($POST['content']);
                                 . "VALUES (NULL, "
                                 . $usId . ", "
                                 . "'" . $usPostContent . "', "
-                                . "NOW()); "
-                            
+                                . "NOW(), "
+                                . "NULL);"
                                 ;
 
                         echo $lInstructionSql;

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fr">
     <head>
@@ -6,27 +9,26 @@
         <meta name="author" content="Julien Falconnet">
         <link rel="stylesheet" href="style.css"/>
     </head>
+
     <body>
-      
-     
         <header> 
         <?php include("header.php"); ?>
-</header>
+        </header>
 
            <?php
         /**
-         * Etape 1: Ouvrir une connexion avec la base de donnée.
+         * Etape 1: Ouvrir une connexion avec la BDD
          */
-        // on va en avoir besoin pour la suite
+      
         include ("db_connection.php");
-        //verification
+     
         if ($mysqli->connect_errno)
         {
             echo("Échec de la connexion : " . $mysqli->connect_error);
             exit();
-        }
-        
+        }        
         ?>
+
         <div id="wrapper" class='admin'>
             <aside>
                 <h2>Mots-clés</h2>
@@ -85,10 +87,10 @@
                     //echo "<pre>" . print_r($tag, 1) . "</pre>";
                     ?>
                     <article>
-                    <h3><?php echo $tag['alias'] ?></h3>
+                    <h3> <a href="wall.php?user_id=<?php echo $tag['id'] ?>"><?php echo $tag['alias'] ?></a></h3>
                         <p><?php echo $tag['id'] ?></p>
                         <nav>
-                            <a href="wall.php?user_id=<?php $_SESSION['connected_id']?>">Mur</a>
+                            <a href="wall.php?user_id=<?php $_SESSION['connected_id']?>"> Mur</a>
                             | <a href="feed.php?user_id=<?php $_SESSION['connected_id']?>">Flux</a>
                             | <a href="settings.php?user_id=<?php $_SESSION['connected_id']?>">Paramètres</a>
                             | <a href="followers.php?user_id=<?php $_SESSION['connected_id']?>">Suiveurs</a>
