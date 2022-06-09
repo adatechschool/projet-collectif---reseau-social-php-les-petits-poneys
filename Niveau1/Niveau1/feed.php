@@ -13,7 +13,8 @@ session_start();
         <header>
         
         <?php include("header.php"); ?>
-
+        <li> Déconnectez-vous <?php include ('logout.php') ?> </li>
+        
         </header>
         <div id="wrapper">
             <?php
