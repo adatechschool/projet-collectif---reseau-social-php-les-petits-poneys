@@ -9,7 +9,7 @@ $enCoursDeTraitement = isset($POST['content']);
                         // et complétez le code ci dessous en remplaçant les ???
                         $usId = $POST['pseudo'];
                         $usPostContent = $POST['message'];
-                         echo "<pre>" . print_r($post, 1) . "</pre>"; 
+                        // echo "<pre>" . print_r($post, 1) . "</pre>"; 
 
                         //Etape 3 : Petite sécurité
                         // pour éviter les injection sql : https://www.w3schools.com/sql/sql_injection.asp

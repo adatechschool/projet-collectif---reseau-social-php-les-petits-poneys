@@ -13,7 +13,7 @@ session_start();
         <header>
         
         <?php include("header.php"); ?>
-        <li> Déconnectez-vous <?php include ('logout.php') ?> </li>
+       
         
         </header>
         <div id="wrapper">
@@ -95,7 +95,7 @@ session_start();
                         ?>
                     </footer>
                 </article>
-                // et de pas oublier de fermer ici vote while
+               
                 <?php } ?>
 
             </main>

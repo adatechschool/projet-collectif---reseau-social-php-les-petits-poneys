@@ -1,6 +1,6 @@
 <?php
 $suiveurId = $_SESSION['connected_id'];
-echo $userId;
+//echo $userId;
 
 if ($userId != $suiveurId) {
     $selection = "SELECT * FROM followers WHERE followed_user_id = ".$userId." AND following_user_id = ".$suiveurId." LIMIT 1;";
@@ -9,11 +9,11 @@ if ($userId != $suiveurId) {
     //echo "ok2";
     if($ok2) {
         while ($f = $ok2->fetch_assoc()) {
-            echo $f;
+            //echo $f;
             if (count($f) > 0) {
-                echo "Vous suivez";
+                echo "Vous suivez déja cet utilisateur";
             } else {
-                echo "Vous suivez pas";
+                echo "Vous ne suivez pas cet utilisateur";
             }
         }
     }else {
@@ -34,9 +34,9 @@ if ($userId != $suiveurId) {
         " . $suiveurId . ")";
             $ok1 = $mysqli->query($follow);
             if (!$ok1) {
-                echo "Impossible de suivre cette abonné: " . $mysqli->error;
+                echo "Impossible de suivre cette abonné!! " . $mysqli->error;
             } else {
-                echo "C'est bon, tu vas pouvoir stalker:";
+                echo "C'est bon, vous allez pouvoir stalker!";
             }
         }
     }

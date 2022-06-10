@@ -96,7 +96,7 @@ session_start();
                     . "NULL);"
                     . "";
 
-                echo $lInstructionSql;
+                // echo $lInstructionSql;
                 // Etape 5 : execution
                 $ok = $mysqli->query($lInstructionSql);
                 if (!$ok) {
@@ -110,7 +110,7 @@ session_start();
                 <input type='hidden' name='auteur' value='<?php $_SESSION['connected_id'] ?>'>
                 <dl>
 
-                    <dt><label for='auteur'>Auteur</label></dt>
+                    <dt><label for='auteur'></label></dt>
                     <!--<dd><select name='auteur'>
                                                         
                                                 <?php foreach ($listAuteurs as $user_id => $alias)
